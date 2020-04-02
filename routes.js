@@ -15,9 +15,13 @@ module.exports = function (app) {
     app.route('/tambah/:id')
         .get(jsonku.tambahMahasiswa);
 
-        app.route('/tambah')
+    app.route('/tambah')
         .post(jsonku.tambahMahasiswa);
 
-        app.route('/ubah')
+    app.route('/ubah')
         .put(jsonku.ubahMahasiswa);
+
+    app.route('/hapus')
+        .delete(jsonku.hapusMahasiswa);
+
 }
